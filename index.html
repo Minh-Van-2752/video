@@ -33,10 +33,10 @@
 
         document.addEventListener('keydown', (event) => {
             if (event.key === 'f') {
-                if (!video.fullscreenElement) {
+                if (!document.fullscreenElement) {
                     video.requestFullscreen();
                 } else {
-                    video.exitFullscreen();
+                    document.exitFullscreen();
                 }
             }
         });
@@ -45,7 +45,7 @@
             if (document.fullscreenElement) {
                 msg.style.display = 'block';
                 setTimeout(() => msg.style.display = 'none', 2000);
-            } 
+            }
         });
     </script>
 </body>
